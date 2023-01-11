@@ -98,7 +98,7 @@ const handleSubmit = async(e) => {
 
    //We will fetch the data from the server and get the aliens response
    //We will create a new response
-   const response = await fetch('https://alien51-code-guru-from-the-galaxies.onrender.com', {
+   const response = await fetch("https://alien51-code-guru-from-the-galaxies.onrender.com", {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
