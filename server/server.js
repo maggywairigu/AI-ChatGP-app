@@ -8,10 +8,11 @@ import { Configuration, OpenAIApi} from 'openai';
 //allows us to use the .env variables
 dotenv.config();
   
+
 //configuration functions which accepts the api key as an object
 const configuration = new Configuration({
-    apiKey: process.env.OPENAI_API_KEY
-})
+    apiKey: process.env.OPENAI_API_KEY,
+});
 
 //creates an instance of open ai and pass in the configuration we created above
 const openai = new OpenAIApi(configuration);
@@ -37,7 +38,7 @@ app.post('/', async(req, res) => {
     try {
         const prompt = req.body.prompt;
         const response = await openai.createCompletion({
-            model:"text-davinci-003",
+            model:"text-davinci-002  ",
             prompt:`${prompt}`,
             temperature:0,
             max_tokens:3000,
