@@ -18,12 +18,12 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 //Initializes our express application
-const app = express();
+const app = express()
 //We are setting up a couple of middlewares
 //allows us to make cross origin requests and allow the server to be called from the frontend 
-app.use(cors());
+app.use(cors())
 //allows us to pass json from the frontend to the backend
-app.use(express.json());
+app.use(express.json())
 
 //We are creating a route
 app.get('/', async(req, res) => {
@@ -38,7 +38,7 @@ app.post('/', async(req, res) => {
     try {
         const prompt = req.body.prompt;
         const response = await openai.createCompletion({
-            model:"text-davinci-002  ",
+            model:"text-davinci-003",
             prompt:`${prompt}`,
             temperature:0,
             max_tokens:3000,
@@ -52,7 +52,7 @@ app.post('/', async(req, res) => {
         })
     } catch (error) {
         console.log(error);
-        res.status(500).send({ error })
+        res.status(500).send(error || 'Something went wrong')
     }
 })
 
