@@ -10,7 +10,7 @@
 body {
   background-image: url('./assets/galaxy.jpg');
   background-size: repeat;
-  filter: brightness(60%);
+  filter: brightness(40%);
   
 }
 
@@ -138,7 +138,6 @@ textarea {
   font-size: 18px;
 
   padding: 10px;
-  background: transparent;
   border-radius: 5px;
   border: none;
   outline: none;
