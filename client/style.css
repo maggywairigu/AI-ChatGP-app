@@ -9,7 +9,6 @@
 
 body {
   background-image: url('./assets/galaxy.jpg');
-  background-size: repeat;
   filter: brightness(60%);
   
 }
